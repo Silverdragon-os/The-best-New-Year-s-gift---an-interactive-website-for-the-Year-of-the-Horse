@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Stellar Steed - Interactive 3D Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div id="loading-text" style="color:#ffcc00; font-family: monospace;">LOADING FESTIVE SPIRIT...</div>
+    </div>
+
+    <div id="video-wrapper">
+        <video id="webcam" autoplay playsinline muted></video>
+        <div id="gesture-guide">
+            <div class="guide-icon"></div>
+            <div class="guide-text">Fist to Summon • Palm to Bloom</div>
+        </div>
+    </div>
+
+    <div id="top-hud">
+        <div id="status-pill" class="status-pill">
+            <span id="gesture-icon" class="icon-gesture">✊</span>
+            <span id="status-text">Make a Fist • Summon Steed</span>
+            <div id="detect-indicator" class="detect-indicator" title="Detection Status"></div>
+        </div>
+    </div>
+
+    <div id="overlay-dimmer"></div>
+    <div id="close-btn">Close Photo</div>
+
+    <div id="canvas-container"></div>
+
+    <div id="ui-layer">
+        <h1>LUNAR NEW YEAR</h1>
+        <div id="controls-row">
+            <button id="manual-btn" class="ui-btn">🖐️ Manual Mode</button>
+            <button id="audio-btn" class="ui-btn">🔊 Enable Audio</button>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+                "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.3/+esm"
+            }
+        }
+    </script>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
